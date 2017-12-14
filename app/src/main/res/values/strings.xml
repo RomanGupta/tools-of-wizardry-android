@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Tools of Wizardry</string>
+    <string name="spell_level">Spell Level</string>
+    <string name="no_of_dice">Number of Dice</string>
+    <string name="roll_dice">Roll Dice</string>
+    <string-array name="entriesSpellLevel">
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+        <item >5</item>
+        <item >6</item>
+        <item >7</item>
+        <item >8</item>
+        <item >9</item>
+    </string-array>
+    <string-array name="entriesNoOfDice">
+        <item >0</item>
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+        <item >5</item>
+        <item >6</item>
+        <item >7</item>
+        <item >8</item>
+        <item >9</item>
+        <item >10</item>
+        <item >11</item>
+        <item >12</item>
+        <item >13</item>
+        <item >14</item>
+    </string-array>
+    <string name="solve_sacred_geometry">Solve Sacred Geometry</string>
+    <string name="no_of_d6">#D6</string>
+    <string name="no_of_d8">#D8</string>
+    <string name="edt_dice_values_hint">Dice values</string>
+    
+</resources>

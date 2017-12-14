@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sgContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".ToolsOfWizardryActivity">
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+
+    -->
+
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="fill_vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|clip_horizontal">
+
+            <Spinner
+                android:id="@+id/spnNoOfD6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:entries="@array/entriesNoOfDice" />
+
+            <TextView
+                android:id="@+id/tvwNoOfD6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="@string/no_of_d6"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/spnNoOfD8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:entries="@array/entriesNoOfDice" />
+
+            <TextView
+                android:id="@+id/tvwNoOfD8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="@string/no_of_d8"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRollDice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/roll_dice" />
+
+        <EditText
+            android:id="@+id/edtDiceValues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:ems="10"
+            android:hint="@string/edt_dice_values_hint"
+            android:inputType="number"
+            android:maxLength="14"
+            android:singleLine="true">
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="fill_vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvwSpellLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.0"
+                android:text="@string/spell_level"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/spnSpellLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:entries="@array/entriesSpellLevel" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSolveSG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/solve_sacred_geometry" />
+
+        <TextView
+            android:id="@+id/tvwSolution"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:singleLine="false"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black_overlay" />
+
+        <TextView
+            android:id="@+id/tvwProbability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
