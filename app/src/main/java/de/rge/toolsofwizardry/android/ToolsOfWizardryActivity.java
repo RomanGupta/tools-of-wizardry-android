@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry;
+package de.rge.toolsofwizardry.android;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import de.rge.toolsofwizardry.R;
 import de.rge.toolsofwizardry.android.listener.SGSpinnerItemSelectedListenerData;
 import de.rge.toolsofwizardry.android.runnable.DiceRollingThread;
 import de.rge.toolsofwizardry.android.runnable.SacredGeometrySolvingThread;
