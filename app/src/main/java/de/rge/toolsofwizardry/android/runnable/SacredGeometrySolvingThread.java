@@ -23,13 +23,12 @@ public class SacredGeometrySolvingThread implements Runnable {
 	public void run() {
 		Integer spellLevel = activityUtil.retrieveSpinnerInteger(R.id.spnSpellLevel);
 		List<Integer> diceValues = retrieveDiceValues();
-		Boolean isSolvable = sacredGeometrySolver.solve(spellLevel, diceValues);
-		activityUtil.updateTextView(R.id.tvwSolution, determineSolution(isSolvable, diceValues, spellLevel));
+		activityUtil.updateTextView(R.id.tvwSolution, computeResponse(spellLevel, diceValues));
 	}
 
 	private List<Integer> retrieveDiceValues() {
 		String strDiceValues = activityUtil.retrieveTextViewText(R.id.edtDiceValues);
-		List<Integer> diceValues = new ArrayList<Integer>();
+		List<Integer> diceValues = new ArrayList<>();
 		for (char character : strDiceValues.toCharArray()) {
 			if ('1' <= character && character <= '8') {
 				diceValues.add(Character.digit(character, 10));
@@ -38,7 +37,11 @@ public class SacredGeometrySolvingThread implements Runnable {
 		return diceValues;
 	}
 	
-	private String determineSolution(Boolean isSolvable, List<Integer> diceValues, Integer spellLevel) {
+	private String computeResponse(Integer spellLevel, List<Integer> diceValues) {
+		if(diceValues.isEmpty()) {
+			return "Please roll the dice or enter dice values!";
+		}
+		Boolean isSolvable = sacredGeometrySolver.solve(spellLevel, diceValues);
 		if (isSolvable) {
 			return "Solution:\n" + sacredGeometrySolver.printSolution();
 		}
