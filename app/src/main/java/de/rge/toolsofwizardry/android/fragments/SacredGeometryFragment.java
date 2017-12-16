@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry.android;
+package de.rge.toolsofwizardry.android.fragments;
 
 import android.os.Bundle;
 import android.os.Handler;

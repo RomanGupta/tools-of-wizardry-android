@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
-import de.rge.toolsofwizardry.android.SacredGeometryFragment;
+
 import de.rge.toolsofwizardry.android.runnable.ProbabilityComputingThread;
 
 public class SGSpinnerItemSelectedListenerData implements AdapterView.OnItemSelectedListener {
