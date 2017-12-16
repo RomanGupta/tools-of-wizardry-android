@@ -4,30 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import android.app.Activity;
+import android.view.View;
+
 import de.rge.basic.solver.SacredGeometrySolver;
 import de.rge.basic.solver.impl.SacredGeometrySolverImpl;
 import de.rge.toolsofwizardry.R;
-import de.rge.ui.util.ActivityUtil;
+import de.rge.ui.util.ViewUtil;
 
 public class SacredGeometrySolvingThread implements Runnable {
 	
 	private SacredGeometrySolver sacredGeometrySolver = new SacredGeometrySolverImpl();
 
-	private ActivityUtil activityUtil;
+	private ViewUtil viewUtil;
 	
-	public SacredGeometrySolvingThread(Activity activity) {
-		activityUtil = new ActivityUtil(activity);
+	public SacredGeometrySolvingThread(View rootView) {
+		viewUtil = new ViewUtil(rootView);
 	}
 
 	public void run() {
-		Integer spellLevel = activityUtil.retrieveSpinnerInteger(R.id.spnSpellLevel);
+		Integer spellLevel = viewUtil.retrieveSpinnerInteger(R.id.spnSpellLevel);
 		List<Integer> diceValues = retrieveDiceValues();
-		activityUtil.updateTextView(R.id.tvwSolution, computeResponse(spellLevel, diceValues));
+		viewUtil.updateTextView(R.id.tvwSolution, computeResponse(spellLevel, diceValues));
 	}
 
 	private List<Integer> retrieveDiceValues() {
-		String strDiceValues = activityUtil.retrieveTextViewText(R.id.edtDiceValues);
+		String strDiceValues = viewUtil.retrieveTextViewText(R.id.edtDiceValues);
 		List<Integer> diceValues = new ArrayList<>();
 		for (char character : strDiceValues.toCharArray()) {
 			if ('1' <= character && character <= '8') {
