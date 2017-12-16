@@ -4,6 +4,7 @@
         <item>Sacred Geometry Solver</item>
         <item>Arithmancy Solver</item>
     </string-array>
+
     <string name="spell_level">Spell Level</string>
     <string name="no_of_dice">Number of Dice</string>
     <string name="roll_dice">Roll Dice</string>
@@ -38,6 +39,9 @@
     <string name="solve_sacred_geometry">Solve Sacred Geometry</string>
     <string name="no_of_d6">#D6</string>
     <string name="no_of_d8">#D8</string>
-    <string name="edt_dice_values_hint">Dice values</string>
+    <string name="edt_dice_values_hint">Dice Values</string>
+
+    <string name="edt_hint_spell_name_for_arithmancy">Spell Name</string>
+    <string name="btn_solve_arithmancy">Solve Arithmancy</string>
 
 </resources>

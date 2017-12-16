@@ -11,6 +11,7 @@ import android.util.SparseArray;
 import java.util.Locale;
 
 import de.rge.toolsofwizardry.R;
+import de.rge.toolsofwizardry.android.fragments.ArithmancyFragment;
 import de.rge.toolsofwizardry.android.fragments.SacredGeometryFragment;
 
 public class Main extends FragmentActivity {
@@ -29,7 +30,7 @@ public class Main extends FragmentActivity {
         private final SparseArray<Fragment> POSITION_TO_FRAGMENT_MAP = new SparseArray<>();
         {
             POSITION_TO_FRAGMENT_MAP.put(0, new SacredGeometryFragment());
-            POSITION_TO_FRAGMENT_MAP.put(1, new SacredGeometryFragment());
+            POSITION_TO_FRAGMENT_MAP.put(1, new ArithmancyFragment());
         }
         private final String ARG_SECTION_NUMBER = "section_number";
 
@@ -53,9 +54,8 @@ public class Main extends FragmentActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            Locale l = Locale.getDefault();
             String[] fragmentTitles = getResources().getStringArray(R.array.fragmentTitles);
-            return fragmentTitles[position].toUpperCase(l);
+            return fragmentTitles[position].toUpperCase(Locale.ENGLISH);
         }
     }
 

@@ -59,9 +59,9 @@ public class SacredGeometryFragment extends Fragment {
 	}
 
 	private void setupBtnSolveSG(View view) {
-		Button btnSolveSG =view.findViewById(R.id.btnSolveSG);
+		Button btnSolve =view.findViewById(R.id.btnSolveSG);
 
-		btnSolveSG.setOnClickListener(new View.OnClickListener() {
+		btnSolve.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				threadHandler.removeCallbacks(diceRollerThread);

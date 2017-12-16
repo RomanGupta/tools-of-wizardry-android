@@ -3,7 +3,6 @@
     android:id="@+id/sgContent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_blue"
     android:orientation="vertical"
     tools:context=".android.fragments.SacredGeometryFragment">
 
@@ -117,9 +116,9 @@
 
         <TextView
             android:id="@+id/tvwSolution"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@color/white"
             android:singleLine="false"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/black_overlay" />
