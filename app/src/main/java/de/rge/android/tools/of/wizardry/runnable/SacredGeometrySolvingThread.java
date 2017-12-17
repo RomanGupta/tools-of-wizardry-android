@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry.android.runnable;
+package de.rge.android.tools.of.wizardry.runnable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import android.view.View;
 import de.rge.basic.solver.SacredGeometrySolver;
 import de.rge.basic.solver.impl.SacredGeometrySolverImpl;
 import de.rge.toolsofwizardry.R;
-import de.rge.ui.util.ViewUtil;
+import de.rge.android.ui.util.ViewUtil;
 
 public class SacredGeometrySolvingThread implements Runnable {
 	

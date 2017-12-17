@@ -1,13 +1,12 @@
-package de.rge.toolsofwizardry.android.runnable;
+package de.rge.android.tools.of.wizardry.runnable;
 
 import java.util.Locale;
 
-import android.app.Activity;
 import android.view.View;
 
 import de.rge.data.FailureResultSets;
 import de.rge.toolsofwizardry.R;
-import de.rge.ui.util.ViewUtil;
+import de.rge.android.ui.util.ViewUtil;
 
 public class ProbabilityComputingThread implements Runnable {
 

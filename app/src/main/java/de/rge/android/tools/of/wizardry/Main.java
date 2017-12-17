@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry.android;
+package de.rge.android.tools.of.wizardry;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,11 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.util.SparseArray;
 
 import de.rge.toolsofwizardry.R;
-import de.rge.toolsofwizardry.android.fragments.ArithmancyFragment;
-import de.rge.toolsofwizardry.android.fragments.SacredGeometryFragment;
-
-import static de.rge.toolsofwizardry.android.ArgumentIdentifier.SECTION_NUMBER;
-import static de.rge.toolsofwizardry.android.ArgumentIdentifier.SECTION_TITLE;
+import de.rge.android.tools.of.wizardry.fragments.ArithmancyFragment;
+import de.rge.android.tools.of.wizardry.fragments.SacredGeometryFragment;
 
 public class Main extends FragmentActivity {
 
@@ -41,7 +38,7 @@ public class Main extends FragmentActivity {
         public Fragment getItem(int position) {
             Fragment fragment = POSITION_TO_FRAGMENT_MAP.get(position);
             Bundle args = new Bundle();
-            args.putInt(SECTION_NUMBER.name(), position + 1);
+            args.putInt(ArgumentIdentifier.SECTION_NUMBER.name(), position + 1);
             fragment.setArguments(args);
             return fragment;
         }
@@ -54,7 +51,7 @@ public class Main extends FragmentActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             Fragment fragment = POSITION_TO_FRAGMENT_MAP.get(position);
-            return fragment.getArguments().getString(SECTION_TITLE.name());
+            return fragment.getArguments().getString(ArgumentIdentifier.SECTION_TITLE.name());
         }
     }
 

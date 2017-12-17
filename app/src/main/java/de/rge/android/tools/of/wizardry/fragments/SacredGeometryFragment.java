@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry.android.fragments;
+package de.rge.android.tools.of.wizardry.fragments;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,11 +11,11 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import de.rge.toolsofwizardry.R;
-import de.rge.toolsofwizardry.android.listener.SGSpinnerItemSelectedListenerData;
-import de.rge.toolsofwizardry.android.runnable.DiceRollingThread;
-import de.rge.toolsofwizardry.android.runnable.SacredGeometrySolvingThread;
+import de.rge.android.tools.of.wizardry.listener.SGSpinnerItemSelectedListenerData;
+import de.rge.android.tools.of.wizardry.runnable.DiceRollingThread;
+import de.rge.android.tools.of.wizardry.runnable.SacredGeometrySolvingThread;
 
-import static de.rge.toolsofwizardry.android.ArgumentIdentifier.SECTION_TITLE;
+import static de.rge.android.tools.of.wizardry.ArgumentIdentifier.SECTION_TITLE;
 
 public class SacredGeometryFragment extends Fragment {
 	private Handler threadHandler = new Handler();

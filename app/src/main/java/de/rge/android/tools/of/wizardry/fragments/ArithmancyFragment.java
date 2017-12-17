@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry.android.fragments;
+package de.rge.android.tools.of.wizardry.fragments;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import de.rge.toolsofwizardry.R;
-import de.rge.toolsofwizardry.android.runnable.ArithmancySolvingThread;
+import de.rge.android.tools.of.wizardry.runnable.ArithmancySolvingThread;
 
-import static de.rge.toolsofwizardry.android.ArgumentIdentifier.SECTION_TITLE;
+import static de.rge.android.tools.of.wizardry.ArgumentIdentifier.SECTION_TITLE;
 
 public class ArithmancyFragment extends Fragment {
     private Handler threadHandler = new Handler();

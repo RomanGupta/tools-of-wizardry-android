@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry.android.runnable;
+package de.rge.android.tools.of.wizardry.runnable;
 
 import android.view.View;
 
@@ -7,7 +7,7 @@ import java.util.Locale;
 import de.rge.basic.solver.ArithmancySolver;
 import de.rge.basic.solver.impl.ArithmancySolverImpl;
 import de.rge.toolsofwizardry.R;
-import de.rge.ui.util.ViewUtil;
+import de.rge.android.ui.util.ViewUtil;
 
 public class ArithmancySolvingThread implements Runnable {
 

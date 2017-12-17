@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry.android;
+package de.rge.android.tools.of.wizardry;
 
 import org.junit.Test;
 
