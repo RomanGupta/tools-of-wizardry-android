@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".android.fragments.ArithmancyFragment">
+    tools:context="de.rge.android.tools.of.wizardry.fragments.ArithmancyFragment">
 
     <Space
         android:layout_width="match_parent"

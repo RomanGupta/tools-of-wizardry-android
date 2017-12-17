@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".android.fragments.SacredGeometryFragment">
+    tools:context="de.rge.android.tools.of.wizardry.fragments.SacredGeometryFragment">
 
     <Space
         android:layout_width="match_parent"
@@ -68,6 +68,7 @@
             android:ems="10"
             android:hint="@string/edt_dice_values_hint"
             android:inputType="number"
+            android:digits="12345678"
             android:maxLength="14"
             android:singleLine="true">
 

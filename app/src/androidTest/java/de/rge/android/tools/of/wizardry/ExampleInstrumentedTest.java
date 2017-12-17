@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry.android;
+package de.rge.android.tools.of.wizardry;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("de.rge.toolsofwizardry.android", appContext.getPackageName());
+        assertEquals("de.rge.android.android", appContext.getPackageName());
     }
 }

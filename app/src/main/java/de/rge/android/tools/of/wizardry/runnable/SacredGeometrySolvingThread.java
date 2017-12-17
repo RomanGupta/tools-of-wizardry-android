@@ -1,4 +1,4 @@
-package de.rge.toolsofwizardry.android.runnable;
+package de.rge.android.tools.of.wizardry.runnable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import android.view.View;
 import de.rge.basic.solver.SacredGeometrySolver;
 import de.rge.basic.solver.impl.SacredGeometrySolverImpl;
 import de.rge.toolsofwizardry.R;
-import de.rge.ui.util.ViewUtil;
+import de.rge.android.ui.util.ViewUtil;
 
 public class SacredGeometrySolvingThread implements Runnable {
 	
@@ -31,9 +31,7 @@ public class SacredGeometrySolvingThread implements Runnable {
 		String strDiceValues = viewUtil.retrieveTextViewText(R.id.edtDiceValues);
 		List<Integer> diceValues = new ArrayList<>();
 		for (char character : strDiceValues.toCharArray()) {
-			if ('1' <= character && character <= '8') {
 				diceValues.add(Character.digit(character, 10));
-			}
 		}
 		return diceValues;
 	}

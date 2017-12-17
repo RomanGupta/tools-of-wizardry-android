@@ -1,11 +1,11 @@
-package de.rge.toolsofwizardry.android.listener;
+package de.rge.android.tools.of.wizardry.listener;
 
 import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
-import de.rge.toolsofwizardry.android.runnable.ProbabilityComputingThread;
+import de.rge.android.tools.of.wizardry.runnable.ProbabilityComputingThread;
 
 public class SGSpinnerItemSelectedListenerData implements AdapterView.OnItemSelectedListener {
 	private final static int MAX_SUM = 14;
