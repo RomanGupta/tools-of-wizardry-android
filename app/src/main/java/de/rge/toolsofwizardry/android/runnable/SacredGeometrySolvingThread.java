@@ -31,9 +31,7 @@ public class SacredGeometrySolvingThread implements Runnable {
 		String strDiceValues = viewUtil.retrieveTextViewText(R.id.edtDiceValues);
 		List<Integer> diceValues = new ArrayList<>();
 		for (char character : strDiceValues.toCharArray()) {
-			if ('1' <= character && character <= '8') {
 				diceValues.add(Character.digit(character, 10));
-			}
 		}
 		return diceValues;
 	}
