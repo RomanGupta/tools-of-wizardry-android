@@ -15,6 +15,8 @@ import de.rge.toolsofwizardry.android.listener.SGSpinnerItemSelectedListenerData
 import de.rge.toolsofwizardry.android.runnable.DiceRollingThread;
 import de.rge.toolsofwizardry.android.runnable.SacredGeometrySolvingThread;
 
+import static de.rge.toolsofwizardry.android.ArgumentIdentifier.SECTION_TITLE;
+
 public class SacredGeometryFragment extends Fragment {
 	private Handler threadHandler = new Handler();
 
@@ -29,9 +31,16 @@ public class SacredGeometryFragment extends Fragment {
 
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
+		initTitle();
 		initRunnables(view);
 		initButtons(view);
 		initSpinners(view);
+	}
+
+	private void initTitle() {
+		String title = this.getString(R.string.fragment_title_sacred_geometry);
+		Bundle args = this.getArguments();
+		args.putString(SECTION_TITLE.name(), title);
 	}
 
 	private void initRunnables(View view) {

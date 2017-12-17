@@ -5,24 +5,24 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class ViewUtil {
-	private View rootView;
+	private View view;
 	
 	public ViewUtil(View rootView) {
-		this.rootView = rootView;
+		this.view = rootView;
 	}
 	
 	public String retrieveTextViewText(int textViewId) {
-		TextView tvw = rootView.findViewById(textViewId);
+		TextView tvw = view.findViewById(textViewId);
 		return tvw.getText().toString();
 	}
 	
 	public void updateTextView(int textViewId, String newText) {
-		TextView tvw = rootView.findViewById(textViewId);
+		TextView tvw = view.findViewById(textViewId);
 		tvw.setText(newText);
 	}
 
 	public Integer retrieveSpinnerInteger(int spinnerId) {
-		Spinner spnNoOfDice = rootView.findViewById(spinnerId);
+		Spinner spnNoOfDice = view.findViewById(spinnerId);
 		String strNoOfDice = (String) spnNoOfDice.getSelectedItem();
 		return Integer.parseInt(strNoOfDice);
 	}

@@ -8,11 +8,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.SparseArray;
 
-import java.util.Locale;
-
 import de.rge.toolsofwizardry.R;
 import de.rge.toolsofwizardry.android.fragments.ArithmancyFragment;
 import de.rge.toolsofwizardry.android.fragments.SacredGeometryFragment;
+
+import static de.rge.toolsofwizardry.android.ArgumentIdentifier.SECTION_NUMBER;
+import static de.rge.toolsofwizardry.android.ArgumentIdentifier.SECTION_TITLE;
 
 public class Main extends FragmentActivity {
 
@@ -32,8 +33,6 @@ public class Main extends FragmentActivity {
             POSITION_TO_FRAGMENT_MAP.put(0, new SacredGeometryFragment());
             POSITION_TO_FRAGMENT_MAP.put(1, new ArithmancyFragment());
         }
-        private final String ARG_SECTION_NUMBER = "section_number";
-
         SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -42,7 +41,7 @@ public class Main extends FragmentActivity {
         public Fragment getItem(int position) {
             Fragment fragment = POSITION_TO_FRAGMENT_MAP.get(position);
             Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, position + 1);
+            args.putInt(SECTION_NUMBER.name(), position + 1);
             fragment.setArguments(args);
             return fragment;
         }
@@ -54,8 +53,8 @@ public class Main extends FragmentActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            String[] fragmentTitles = getResources().getStringArray(R.array.fragmentTitles);
-            return fragmentTitles[position].toUpperCase(Locale.ENGLISH);
+            Fragment fragment = POSITION_TO_FRAGMENT_MAP.get(position);
+            return fragment.getArguments().getString(SECTION_TITLE.name());
         }
     }
 
