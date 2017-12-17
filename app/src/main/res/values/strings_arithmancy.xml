@@ -1,0 +1,5 @@
+<resources>
+    <string name="fragment_title_arithmancy">Arithmancy Solver</string>
+    <string name="edt_hint_spell_name_arithmancy">Spell Name</string>
+    <string name="btn_solve_arithmancy">Solve Arithmancy</string>
+</resources>

@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/arithmancyContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".android.fragments.ArithmancyFragment">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="fill_vertical" />
+
+    <EditText
+        android:id="@+id/edtSpellName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/edt_hint_spell_name_arithmancy"
+        android:singleLine="true">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSolveArithmancy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_solve_arithmancy" />
+
+
+    <TextView
+        android:id="@+id/tvwArithmancySolution"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:singleLine="false"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black_overlay" />
+
+</LinearLayout>

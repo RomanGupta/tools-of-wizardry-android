@@ -2,19 +2,20 @@ package de.rge.toolsofwizardry.android.runnable;
 
 import java.util.List;
 
-import android.app.Activity;
+import android.view.View;
+
 import de.rge.basic.util.DiceUtil;
 import de.rge.toolsofwizardry.R;
-import de.rge.ui.util.ActivityUtil;
+import de.rge.ui.util.ViewUtil;
 
 public class DiceRollingThread implements Runnable {
 
 	private DiceUtil diceUtil = new DiceUtil();
 	
-	private ActivityUtil activityUtil;
+	private ViewUtil activityUtil;
 	
-	public DiceRollingThread(Activity activity) {
-		activityUtil = new ActivityUtil(activity);
+	public DiceRollingThread(View rootView) {
+		activityUtil = new ViewUtil(rootView);
 	}
 
 	public void run() {

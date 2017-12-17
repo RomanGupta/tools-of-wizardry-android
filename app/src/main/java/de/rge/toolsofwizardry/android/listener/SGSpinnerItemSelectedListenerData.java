@@ -1,26 +1,29 @@
 package de.rge.toolsofwizardry.android.listener;
 
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
-import de.rge.toolsofwizardry.ToolsOfWizardryActivity;
+
 import de.rge.toolsofwizardry.android.runnable.ProbabilityComputingThread;
 
 public class SGSpinnerItemSelectedListenerData implements AdapterView.OnItemSelectedListener {
-	private final static int MAX_SUM = 14; 
-	
-	public ToolsOfWizardryActivity activity;
-	private Runnable probabilityThread; 
-	public Spinner counterSpinner;
+	private final static int MAX_SUM = 14;
 
-	public SGSpinnerItemSelectedListenerData(ToolsOfWizardryActivity activity) {
-		this(activity, null);
+	private Handler threadHandler;
+	private View rootView;
+	private Runnable probabilityThread; 
+	private Spinner counterSpinner;
+
+	public SGSpinnerItemSelectedListenerData(Handler threadHandler, View rootView) {
+		this(threadHandler, rootView, null);
 	}
 
-	public SGSpinnerItemSelectedListenerData(ToolsOfWizardryActivity activity, Integer counterSpinnerId) {
-		this.activity = activity;
-		this.probabilityThread = new ProbabilityComputingThread(activity);
-		this.counterSpinner = (Spinner) (null != counterSpinnerId ? activity.findViewById(counterSpinnerId) : null);
+	public SGSpinnerItemSelectedListenerData(Handler threadHandler, View rootView, Integer counterSpinnerId) {
+		this.threadHandler = threadHandler;
+		this.rootView = rootView;
+		this.probabilityThread = new ProbabilityComputingThread(rootView);
+		this.counterSpinner = (Spinner) (null != counterSpinnerId ? rootView.findViewById(counterSpinnerId) : null);
 	}
 
 	@Override
@@ -29,8 +32,8 @@ public class SGSpinnerItemSelectedListenerData implements AdapterView.OnItemSele
 		if (null != counterSpinner) {
 			setItemSumToMax((Spinner) arg0);
 		}
-		activity.getThreadHandler().removeCallbacks(probabilityThread);
-		activity.getThreadHandler().post(probabilityThread);
+		threadHandler.removeCallbacks(probabilityThread);
+		threadHandler.post(probabilityThread);
 	}
 
 	private void setItemSumToMax(Spinner spinner) {
