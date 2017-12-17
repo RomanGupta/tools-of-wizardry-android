@@ -27,14 +27,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
-                android:entries="@array/entriesNoOfDice" />
+                android:entries="@array/spn_entries_no_of_dice" />
 
             <TextView
                 android:id="@+id/tvwNoOfD6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
-                android:text="@string/no_of_d6"
+                android:text="@string/lbl_no_of_d6"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <Spinner
@@ -42,14 +42,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
-                android:entries="@array/entriesNoOfDice" />
+                android:entries="@array/spn_entries_no_of_dice" />
 
             <TextView
                 android:id="@+id/tvwNoOfD8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
-                android:text="@string/no_of_d8"
+                android:text="@string/lbl_no_of_d8"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>
@@ -58,7 +58,7 @@
             android:id="@+id/btnRollDice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/roll_dice" />
+            android:text="@string/btn_roll_dice" />
 
         <EditText
             android:id="@+id/edtDiceValues"
@@ -97,7 +97,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4.0"
-                android:text="@string/spell_level"
+                android:text="@string/lbl_spell_level"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <Spinner
@@ -105,14 +105,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
-                android:entries="@array/entriesSpellLevel" />
+                android:entries="@array/spn_entries_spell_level" />
         </LinearLayout>
 
         <Button
             android:id="@+id/btnSolveSG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/solve_sacred_geometry" />
+            android:text="@string/btn_solve_sacred_geometry" />
 
         <TextView
             android:id="@+id/tvwSolution"

@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/edt_hint_spell_name_for_arithmancy"
+        android:hint="@string/edt_hint_spell_name_arithmancy"
         android:singleLine="true">
 
         <requestFocus />

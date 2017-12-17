@@ -1,20 +1,7 @@
 <resources>
     <string name="fragment_title_sacred_geometry">Sacred Geometry Solver</string>
-    <string name="spell_level">Spell Level</string>
-    <string name="no_of_dice">Number of Dice</string>
-    <string name="roll_dice">Roll Dice</string>
-    <string-array name="entriesSpellLevel">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-    </string-array>
-    <string-array name="entriesNoOfDice">
+
+    <string-array name="spn_entries_no_of_dice">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -31,8 +18,22 @@
         <item>13</item>
         <item>14</item>
     </string-array>
-    <string name="solve_sacred_geometry">Solve Sacred Geometry</string>
-    <string name="no_of_d6">#D6</string>
-    <string name="no_of_d8">#D8</string>
+    <string name="lbl_no_of_d6">#D6</string>
+    <string name="lbl_no_of_d8">#D8</string>
+    <string name="btn_roll_dice">Roll Dice</string>
     <string name="edt_dice_values_hint">Dice Values</string>
+
+    <string name="lbl_spell_level">Spell Level</string>
+    <string-array name="spn_entries_spell_level">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <string name="btn_solve_sacred_geometry">Solve Sacred Geometry</string>
 </resources>
