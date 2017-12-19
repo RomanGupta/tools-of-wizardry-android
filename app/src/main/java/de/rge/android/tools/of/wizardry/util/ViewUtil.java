@@ -1,4 +1,4 @@
-package de.rge.android.ui.util;
+package de.rge.android.tools.of.wizardry.util;
 
 import android.view.View;
 import android.widget.Spinner;
