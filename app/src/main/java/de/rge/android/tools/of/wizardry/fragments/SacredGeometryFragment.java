@@ -10,12 +10,11 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import de.rge.toolsofwizardry.R;
 import de.rge.android.tools.of.wizardry.listener.SGSpinnerItemSelectedListenerData;
 import de.rge.android.tools.of.wizardry.runnable.DiceRollingThread;
 import de.rge.android.tools.of.wizardry.runnable.SacredGeometrySolvingThread;
-
-import static de.rge.android.tools.of.wizardry.ArgumentIdentifier.SECTION_TITLE;
+import de.rge.android.tools.of.wizardry.util.ArgumentUtil;
+import de.rge.toolsofwizardry.R;
 
 public class SacredGeometryFragment extends Fragment {
 	private Handler threadHandler = new Handler();
@@ -31,16 +30,9 @@ public class SacredGeometryFragment extends Fragment {
 
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
-		initTitle();
 		initRunnables(view);
 		initButtons(view);
 		initSpinners(view);
-	}
-
-	private void initTitle() {
-		String title = this.getString(R.string.fragment_title_sacred_geometry);
-		Bundle args = this.getArguments();
-		args.putString(SECTION_TITLE.name(), title);
 	}
 
 	private void initRunnables(View view) {
