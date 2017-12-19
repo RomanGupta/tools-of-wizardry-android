@@ -11,7 +11,7 @@ import de.rge.android.tools.of.wizardry.fragments.SacredGeometryFragment;
 import de.rge.android.tools.of.wizardry.util.ArgumentUtil;
 import de.rge.toolsofwizardry.R;
 
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class TabPagerAdapter extends FragmentPagerAdapter {
 
     private ArgumentUtil argumentUtil = new ArgumentUtil();
 
@@ -19,7 +19,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     private final Context context;
 
-    public SectionsPagerAdapter(FragmentManager fm, Context context) {
+    public TabPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
         initFragments();
