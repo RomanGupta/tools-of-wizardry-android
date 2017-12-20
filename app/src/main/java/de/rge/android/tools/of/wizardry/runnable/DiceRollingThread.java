@@ -6,7 +6,7 @@ import android.view.View;
 
 import de.rge.basic.util.DiceUtil;
 import de.rge.toolsofwizardry.R;
-import de.rge.android.ui.util.ViewUtil;
+import de.rge.android.tools.of.wizardry.util.ViewUtil;
 
 public class DiceRollingThread implements Runnable {
 

@@ -8,10 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import de.rge.toolsofwizardry.R;
 import de.rge.android.tools.of.wizardry.runnable.ArithmancySolvingThread;
-
-import static de.rge.android.tools.of.wizardry.ArgumentIdentifier.SECTION_TITLE;
+import de.rge.android.tools.of.wizardry.util.ArgumentUtil;
+import de.rge.toolsofwizardry.R;
 
 public class ArithmancyFragment extends Fragment {
     private Handler threadHandler = new Handler();
@@ -25,15 +24,8 @@ public class ArithmancyFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        initTitle();
         initRunnables(view);
         initButtons(view);
-    }
-
-    private void initTitle() {
-        String title = this.getString(R.string.fragment_title_arithmancy);
-        Bundle args = this.getArguments();
-        args.putString(SECTION_TITLE.name(), title);
     }
 
     private void initRunnables(View view) {

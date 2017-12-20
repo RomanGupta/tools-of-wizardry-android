@@ -7,7 +7,7 @@ import java.util.Locale;
 import de.rge.basic.solver.ArithmancySolver;
 import de.rge.basic.solver.impl.ArithmancySolverImpl;
 import de.rge.toolsofwizardry.R;
-import de.rge.android.ui.util.ViewUtil;
+import de.rge.android.tools.of.wizardry.util.ViewUtil;
 
 public class ArithmancySolvingThread implements Runnable {
 
