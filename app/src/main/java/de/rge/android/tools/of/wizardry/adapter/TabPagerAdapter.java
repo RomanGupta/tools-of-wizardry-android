@@ -8,6 +8,7 @@ import android.util.SparseArray;
 
 import de.rge.android.tools.of.wizardry.fragments.ArithmancyFragment;
 import de.rge.android.tools.of.wizardry.fragments.SacredGeometryFragment;
+import de.rge.android.tools.of.wizardry.fragments.SpellRepositoryFragment;
 import de.rge.android.tools.of.wizardry.util.ArgumentUtil;
 import de.rge.toolsofwizardry.R;
 
@@ -34,6 +35,10 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
                 new ArithmancyFragment(),
                 2,
                 R.string.fragment_title_arithmancy));
+        fragments.put(2, attachArguments(
+                new SpellRepositoryFragment(),
+                3,
+                R.string.fragment_title_spell_repository));
     }
 
     private Fragment attachArguments(Fragment fragment, int tabNumber, int tabTitleId) {

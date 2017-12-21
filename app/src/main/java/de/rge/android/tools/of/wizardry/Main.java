@@ -17,8 +17,8 @@ public class Main extends FragmentActivity {
 
         ViewPager viewPager = findViewById(R.id.pager);
 
-        TabPagerAdapter sectionsPagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), getApplicationContext());
-        viewPager.setAdapter(sectionsPagerAdapter);
+        TabPagerAdapter tabPagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), getApplicationContext());
+        viewPager.setAdapter(tabPagerAdapter);
 
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
